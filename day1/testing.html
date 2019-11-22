@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use code to test code</title>
+</head>
+<body>
+    <script>
+        const assert = (testName, assertion) => {
+            if (assertion === true) {
+                console.log(`${testName}: passed`)
+            } else {
+                console.log(`${testName}: failed!`)
+            }
+        }
+
+        const add = (numOne, numTwo) => {
+            return numOne + numTwo
+        }
+        
+        // Is the output of the add function what we expect
+        assert('It adds up to 7', add(5, 2) === 7)
+        assert('It adds up to 10', add(5, '5') === 10)
+
+        // -----------------------------------
+
+        const ageInSeconds = ageInYears => {
+            return ageInYears * 365 * 86400;
+        }
+        assert('My age in seconds is 1072224000', ageInSeconds(34) === 1072224000)
+    </script>
+    
+</body>
+</html>
